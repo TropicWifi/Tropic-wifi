@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aksè Jesyon - Tropic Wi-Fi</title>
+    <style>
+        * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+        body { background: #0f172a; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; padding: 20px; }
+        .box { background: #1e293b; padding: 28px; border-radius: 20px; width: 100%; max-width: 350px; text-align: center; }
+        h2 { color: #38bdf8; margin-top: 0; }
+        input { width: 100%; padding: 15px; font-size: 24px; text-align: center; letter-spacing: 8px; border-radius: 12px; border: 2px solid #334155; background: #0f172a; color: white; margin: 15px 0; }
+        button { width: 100%; padding: 15px; background: #38bdf8; color: #0f172a; border: none; border-radius: 12px; font-size: 17px; font-weight: bold; }
+        .err { color: #f87171; margin-top: 10px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>🔐 Jesyon Tropic Wi-Fi</h2>
+        <p style="color:#94a3b8; font-size:14px;">Antre kòd sekrè ou a (1234)</p>
+        <form method="POST">
+            <input type="password" name="pin" inputmode="numeric" pattern="[0-9]*" placeholder="••••" required>
+            <button type="submit">Antre nan Jesyon</button>
+        </form>
+        {% if error %}<div class="err">{{ error }}</div>{% endif %}
+    </div>
+</body>
+</html>
