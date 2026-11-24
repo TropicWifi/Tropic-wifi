@@ -5,7 +5,8 @@ import string
 from datetime import datetime, timedelta
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
+
 app.secret_key = os.environ.get('SECRET_KEY', 'tropic_wifi_limonade_509_sekre')
 DB_NAME = 'tropic_wifi.db'
 ADMIN_PIN = '1234'
